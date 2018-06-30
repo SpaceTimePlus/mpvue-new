@@ -1,25 +1,23 @@
 <template>
   <div class="counter-warp">
-    <p>Vuex counter：{{ count }}</p>
-    <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
-    </p>
-
+    <p>Vuex counter：{{ expire }} {{test}}</p>
     <a href="/pages/index/index" class="home">去往首页</a>
   </div>
 </template>
 
 <script>
 // Use Vuex
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      count: state => state.counter.count
-    })
+      expire: state => state.member.expire
+    }),
+    ...mapGetters(['test'])
   },
   mounted () {
+    console.log('test', this.test, this.expire)
+
     this.getProvince({
       testParams: '1'
     }).then(res => {
@@ -27,9 +25,7 @@ export default {
     })
   },
   methods: {
-    ...mapActions('counter', [
-      'increment',
-      'decrement',
+    ...mapActions([
       'getProvince'
     ])
   }
