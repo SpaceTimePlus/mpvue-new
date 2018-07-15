@@ -13,7 +13,7 @@
 </script>
 
 <style>
-  @import './asset/zanui.wxss';
+  /*@import './static/zanui.wxss';*/
 
   .container {
     height: 100%;

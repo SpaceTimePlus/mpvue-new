@@ -6,15 +6,15 @@ module.exports = [
     }
   },
   {
-    path: '/pages/counter/index',
+    path: '/pages/message/index',
     config: {
-      navigationBarTitleText: 'vuex例子'
+      navigationBarTitleText: '消息'
     }
   },
   {
-    path: '/pages/logs/index',
+    path: '/pages/home/index',
     config: {
-      navigationBarTitleText: '日志'
+      navigationBarTitleText: '我的'
     }
   }
 ]
