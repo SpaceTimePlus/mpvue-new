@@ -1,4 +1,5 @@
 <script>
+  import 'mpvue-zanui/'
   export default {
     mpType: 'app',
     created () {
@@ -13,7 +14,7 @@
 </script>
 
 <style>
-  /*@import './static/zanui.wxss';*/
+  @import '~mpvue-zanui/src/assets/style/zanui.wxss';
 
   .container {
     height: 100%;
